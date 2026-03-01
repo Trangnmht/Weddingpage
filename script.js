@@ -61,7 +61,6 @@ function changeBackground() {
   hero.style.animation = "zoomEffect 3s linear forwards";
 
   currentIndex = (currentIndex + 1) % images.length;
-  currentLayer = currentLayer === 0 ? 1 : 0;
 }
 
 // Ảnh đầu tiên
@@ -74,30 +73,14 @@ setInterval(changeBackground, 3000);
 
 
 /* AUTO PLAY MUSIC (fix cho iOS / Chrome chặn autoplay) */
-// const music = document.getElementById("bg-music");
-// const btn = document.getElementById("music-btn");
-
-// const playMusic = () => {
-//   music.play().then(()=>{
-//     btn.style.display = "none";
-//   }).catch(()=>{
-//     btn.style.display = "block";
-//   });
-// };
-
-// /* thử autoplay khi load */
-// window.addEventListener("load", playMusic);
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("music-btn");
 
 // /* nếu bị chặn → user click để bật */
-// btn.addEventListener("click", ()=>{
-//   music.play();
-//   btn.style.display = "true";
-// });
-
-/* cho phép click bất kỳ đâu cũng bật nhạc */
-// document.addEventListener("click", ()=>{
-//   if(music.paused) music.play();
-// },{ once:true });
+btn.addEventListener("click", ()=>{  
+  if(music.paused) music.play();
+  else music.pause();
+});
 
 /* SCROLL ANIMATION */
 const reveals = document.querySelectorAll(".reveal");
