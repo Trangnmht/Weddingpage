@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minh Ngọc & Huyền Trang</title>
+
+  <!-- Google font handwritten -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero bg-image section-overlay">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Save The Date</p>
+    <h1 class="names">Minh Ngọc <span>&</span> Huyền Trang</h1>
+
+    <div class="countdown">
+        <div><span id="days">00</span><p>Ngày</p></div>
+        <div><span id="hours">00</span><p>Giờ</p></div>
+        <div><span id="minutes">00</span><p>Phút</p></div>
+        <div><span id="seconds">00</span><p>Giây</p></div>
+      </div>
+  </div>
+</section>
+
+<!-- COUPLE -->
+<section class="couple bg-image container">
+  <h2>Chú Rể Và Cô Dâu</h2>
+
+  <div class="couple-grid">
+    <div class="groom bg-image card placeholder"></div>
+    <div class="bride bg-image card placeholder"></div>
+  </div>
+</section>
+
+<!-- STORY TIMELINE (ĐÃ THÊM) -->
+<section class="story container">
+  <h2>Câu Chuyện Tình Yêu</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="heart"></div>
+      <h3>Lần Đầu Gặp</h3>
+      <p>Chúng tôi gặp nhau trong một ngày rất bình thường,
+         nhưng lại là khởi đầu cho điều đặc biệt.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="heart"></div>
+      <h3>Hẹn Hò</h3>
+      <p>Những buổi xem phim, trà sữa và những câu chuyện không hồi kết,
+         và chúng tôi biết mình thuộc về nhau.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="heart"></div>
+      <h3>Cầu Hôn</h3>
+      <p>Một lời hỏi đơn giản nhưng chứa cả tương lai:
+         "Mình cưới nhau nhé?"</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section class="event container">
+  <div class="event-card">
+    <div class="event-image placeholder">
+      <img src="assets/images/couple1.jpg" alt="Couple">
+    </div>
+
+    <h2 class="event-title">TƯ GIA NHÀ TRAI</h2>
+
+    <p class="event-address">
+      Khu đất dịch vụ – Phố Xuân Mai – Phường Phúc Yên – Tỉnh Phú Thọ
+    </p>
+
+    <p class="event-time">Vào lúc 16:00</p>
+
+    <div class="event-date">
+      <span class="date-left">Thứ Bảy</span>
+      <span class="date-main">24/01</span>
+      <span class="date-right">2026</span>
+    </div>
+
+    <p class="event-lunar">06/12/2025</p>
+
+    <div class="event-actions">
+      <a href="#">📞</a>
+      <a href="#">💬</a>
+      <a href="#">📍</a>
+    </div>
+  </div>  
+  <div style="height: 24px; width: 100%; background-color: #fff;"> </div>
+  <div class="event-card">
+    <div class="event-image placeholder">
+      <img src="assets/images/couple1.jpg" alt="Couple">
+    </div>
+
+    <h2 class="event-title">TƯ GIA NHÀ GÁI</h2>
+
+    <p class="event-address">
+      Xóm Tây Ninh – Sen Phương – Phường Phúc Thọ – Thành phố Hà Nội
+    </p>
+
+    <p class="event-time">Vào lúc 16:00</p>
+
+    <div class="event-date">
+      <span class="date-left">Thứ Bảy</span>
+      <span class="date-main">24/01</span>
+      <span class="date-right">2026</span>
+    </div>
+
+    <p class="event-lunar">06/12/2025</p>
+
+    <div class="event-actions">
+      <a href="#">📞</a>
+      <a href="#">💬</a>
+      <a href="#">📍</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery container">
+  <h2>Album Ảnh</h2>
+
+  <div class="slider">
+
+    <!-- Arrow Left -->
+    <button class="nav prev">&#10094;</button>
+
+    <!-- Images -->
+    <div class="slides">
+      <img src="assets/images/g1.jpg" class="slide bg-image active">
+      <img src="assets/images/g2.jpg" class="slide bg-image">
+      <img src="assets/images/g3.jpg" class="slide bg-image">
+      <img src="assets/images/g4.jpg" class="slide bg-image">
+      <img src="assets/images/g5.jpg" class="slide bg-image">
+    </div>
+
+    <!-- Arrow Right -->
+    <button class="nav next">&#10095;</button>
+
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+  <div class="container">
+    <h2>Xác Nhận Tham Dự</h2>
+
+    <form class="rsvp-form">
+      <input type="text" placeholder="Tên của bạn" required />
+      <input type="number" placeholder="Số người tham dự" required />
+      <textarea placeholder="Lời nhắn"></textarea>
+      <button type="submit">Gửi xác nhận</button>
+    </form>
+  </div>
+</section>
+
+<audio id="bg-music" loop>
+    <source src="assets/music/music.mp3" type="audio/mpeg">
+</audio>
+  
+  <!-- Nút bật nhạc khi mobile chặn autoplay -->
+<button id="music-btn" class="music-btn">🔊</button>
+
+<script src="script.js"></script>
+</body>
+
+
+</html>
