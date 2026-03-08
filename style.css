@@ -52,6 +52,10 @@
   }
 
 /* #region HERO */
+  .head {
+    overflow: hidden;
+  }
+
   .hero {
     height: 100vh;    
     display: flex;
@@ -59,7 +63,6 @@
     justify-content: center;
     color: white;
     text-align: center;
-    overflow: hidden;
     transform: scale(1);
     transition: opacity 1s ease-in-out;
     animation: zoomEffect 3s linear forwards;
@@ -444,29 +447,49 @@
   
 /* #endregion */  
   
-/* #region RSVP */
-  .rsvp {
-    background: #fafafa;
+/* #region INVITATION */
+  .invitation{      
+      background-image:url("assets/images/invitation.jpg");
+      background-size:cover;
+      background-position:center;
+      height: 100vh;    
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 160px;
   }
-  
-  .rsvp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+  /* TEXT */
+  .invite-title{
+      letter-spacing:3px;
+      font-weight:600;
   }
-  
-  .rsvp-form input,
-  .rsvp-form textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
+
+  .invite-line{
+    color:#aaa;
+    margin:10px 0 20px;
   }
-  
-  .rsvp-form button {
-    background: var(--gold);
-    color: white;
-    padding: 14px;
-    border: none;
-    cursor: pointer;
+
+  .invite-text{
+    max-width:420px;
+    line-height:1.8;
+  }
+
+  /* FOOTER */
+  .invite-footer{
+      line-height:1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .invite-end{
+      margin-top:20px;
+      font-weight:bold;
+      letter-spacing:2px;
   }
 /* #endregion */  
   
@@ -493,6 +516,32 @@
     .names { font-size: 42px; }
     .couple-grid { grid-template-columns: 1fr; }
     .masonry { column-count: 1; }
+  }
+
+  @media (max-width: 600px){
+
+    .invite-text{
+      max-width:300px;
+      font-size:14px;
+      text-align:center;
+      text-wrap:balance;
+    }
+
+    .invite-footer{
+      font-size:14px;
+      text-align:center;
+      text-wrap:balance;
+      line-height:1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .invite-footer .appear{
+        letter-spacing:0.5px;
+        white-space:normal;
+    }
   }
 /* #endregion */
 
