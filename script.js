@@ -169,3 +169,41 @@ dots.forEach((dot,i)=>{
 /* start */
 startAuto();
 /* #endregion */
+
+const API_URL = "https://script.google.com/macros/s/AKfycbyP0b6_imW1okDEaMj-H0B-Jn-Jlor3QUxUk7qj5R4ZP_APFS5myAUSDSiAbeFjSNoA/exec";
+
+function getIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
+
+async function loadInviteName() {
+  const id = getIdFromUrl();
+
+  if (!id || id === "index.html") {
+    document.querySelector(".invitation-custom")?.remove();
+    return
+  };
+
+  try {
+    const res = await fetch(`${API_URL}?t=${Date.now()}`);
+    const data = await res.json();
+
+    if (data.length > 0) {
+      var guest = data.find(x => x.id === id);
+      const name = guest.name;
+      const role = guest.role;
+
+      document.getElementsByClassName("invite-line")[0].innerHTML =
+        `<strong>${name}</strong>`;
+      document.getElementsByClassName("role")[0].innerHTML =
+        `${role}`;        
+    }else{
+      document.querySelector(".invitation-custom")?.remove();
+    }
+  } catch (err) {
+    document.querySelector(".invitation-custom")?.remove();
+  }
+}
+
+loadInviteName();
